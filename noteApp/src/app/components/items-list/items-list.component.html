@@ -1,0 +1,9 @@
+<div class="container-sm border mt-3">
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <button type="button" id="add" class="btn {{addButtonColor}} mt-2 mb-2" (click)="onPressNewTask()">{{addButtonText}}</button>
+    </div>
+    <app-item-new [ngStyle]="{display: isShowNewContainer}"></app-item-new>
+    <app-item></app-item>
+    <app-item></app-item>
+    <app-item></app-item>
+</div>
