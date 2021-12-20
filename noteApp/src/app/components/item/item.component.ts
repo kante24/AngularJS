@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
 
+  isShowTaskContainer = "block"
+  action = "false"
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onPressDeleteTask()
+  {
+    this.isShowTaskContainer = "none"
+    this.action = "true"
+  }
 }

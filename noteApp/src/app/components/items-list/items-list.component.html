@@ -1,9 +1,23 @@
 <div class="container-sm border mt-3">
+
     <div class="d-flex flex-row-reverse bd-highlight">
         <button type="button" id="add" class="btn {{addButtonColor}} mt-2 mb-2" (click)="onPressNewTask()">{{addButtonText}}</button>
     </div>
+
     <app-item-new [ngStyle]="{display: isShowNewContainer}"></app-item-new>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
+
+    <div class="container position-relative">
+        <button [ngStyle]="{display: deleteTaskContainer1}" type="button" class="btn position-absolute top-0 start-50 translate-middle m-4" (click)="delete1()">
+            <img style="width: 30px;height: 30px;" src="https://www.pngmart.com/files/16/Trash-Clipart-PNG-HD.png"/>
+        </button>
+        <app-item [ngStyle]="{display: deleteTaskContainer1}"></app-item>
+    </div>
+
+    <div class="container position-relative">
+        <button [ngStyle]="{display: deleteTaskContainer2}" type="button" class="btn position-absolute top-0 start-50 translate-middle m-4" (click)="delete2()">
+            <img style="width: 30px;height: 30px;" src="https://www.pngmart.com/files/16/Trash-Clipart-PNG-HD.png"/>
+        </button>
+        <app-item [ngStyle]="{display: deleteTaskContainer2}"></app-item>
+    </div>
+
 </div>

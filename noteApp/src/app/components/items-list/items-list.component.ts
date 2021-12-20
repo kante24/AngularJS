@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ItemsListComponent implements OnInit {
   //Cache l'items-list
   isShowNewContainer = "none"
+  deleteTaskContainer1 = "block"
+  deleteTaskContainer2 = "block"
 
   //Texte et couleur du bouton ajouter une tâche
   addButtonText = "Ajouter une Tâches"
@@ -16,6 +18,7 @@ export class ItemsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(document.getElementById("h5")?.textContent)
   }
 
   //Afhiche items-list par click sur bouton
@@ -34,6 +37,18 @@ export class ItemsListComponent implements OnInit {
       this.addButtonText = "Ajouter une Tâches"
       this.addButtonColor = "btn-dark"
     }
+  }
+
+  //Delete task 1
+  delete1()
+  {
+    this.deleteTaskContainer1 = "none"
+  }
+
+  //Delete task 2
+  delete2()
+  {
+    this.deleteTaskContainer2 = "none"
   }
 
 }
